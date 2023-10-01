@@ -1,0 +1,311 @@
+/*estilo de titulo*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.google.com/specimen/Comic+Neue?query=comic");
+
+
+.layout {
+    width: 1366px;
+    height: 768px;
+  
+    display: grid;
+    grid:
+      "header" auto
+      "main" 1fr
+      / 1fr;
+    gap: 8px;
+  }
+  .header { grid-area: header; }
+  .main { grid-area: main; }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-radial-gradient(#560e86, #0e0118);
+  }
+/*titulo*/
+  .container span {
+    font-size: 120pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  } 
+  .container span::before {
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px);
+  }
+  .container span::after {
+    content: var(--l);
+    position: absolute;
+    height: 200%;
+    width: 300px;
+    top: 30%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+  }
+  .container span:hover {
+    filter: contrast(250%);
+  }
+  .container span:nth-child(1) {
+    color: #00bef8a4;
+  }
+  .container span:nth-child(2) {
+    color: #f86abd;
+  }
+  .container span:nth-child(3) {
+    color: #ff4d00;
+  }
+  .container span:nth-child(4) {
+    color: #ffe600;
+  }
+  .container span:nth-child(5) {
+    color: #bb00ff;
+  }
+  .container span:nth-child(6) {
+    color: #993567;
+  }
+  .container span:nth-child(7) {
+    color: #cfbb4a;
+  }
+  .container span:nth-child(8) {
+    color: #ffa600;
+  }
+  /*search bar style*/
+  .buscar {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 5px;
+  }
+  
+  .buscar input {
+    width: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #222;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+  }
+ 
+  .btn {
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    background: #440088;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .buscar:hover input {
+    width: 240px;
+  }
+  
+  .buscar input:focus {
+    width: 240px;
+  }
+
+  /*botones*/
+  .boton{
+    min-height: vh;
+    display: flex;
+}
+.bot{
+    display: flex;
+    flex-direction: column;     
+}
+
+.bot{
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    position: relative;
+    margin: 32px;
+}
+/*boton 1*/
+.bot1{
+    color: white;
+    border-radius: 40px;    
+    top: 100px;
+    left: 200px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 0 0 rgba(110, 132, 231, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.bot1::after{
+    content: "";
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: -250px;
+    left: -100px;
+    background: #0b046d;
+    background-image: linear-gradient(-225deg, #154f57 0%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.bot1:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(16, 226, 253, 0.5);
+}
+
+.bot1:hover::after{
+    transform: rotate(150deg);
+}
+/*boton 2*/
+.bot2{
+    color: white;
+    border-radius: 40px;    
+    top: 200px;
+    left: 200px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 0 0 rgba(64, 98, 248, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.bot2::after{
+    content: "";
+    width: 700px;
+    height: 600px;
+    position: absolute;
+    top: -250px;
+    left: -100px;
+    background: #0b046d;
+    background-image: linear-gradient(-225deg, #154f57 0%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.bot2:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(16, 226, 253, 0.5);
+}
+
+.bot2:hover::after{
+    transform: rotate(150deg);
+}
+/*boton 3*/
+.bot3{
+    color: white;
+    border-radius: 40px;    
+    top: 300px;
+    left: 200px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 0 0 rgba(64, 98, 248, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.bot3::after{
+    content: "";
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: -250px;
+    left: -100px;
+    background: #0b046d;
+    background-image: linear-gradient(-225deg, #154f57 0%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.bot3:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(16, 226, 253, 0.5);
+}
+
+.bot3:hover::after{
+    transform: rotate(150deg);
+}
+
+/*boton 4*/
+.bot4{
+    color: white;
+    border-radius: 40px;    
+    top: 400px;
+    left: 200px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 0 0 rgba(64, 98, 248, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.bot4::after{
+    content: "";
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: -250px;
+    left: -100px;
+    background: #0b046d;
+    background-image: linear-gradient(-225deg, #154f57 0%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.bot4:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(16, 226, 253, 0.5);
+}
+
+.bot4:hover::after{
+    transform: rotate(150deg);
+}
+
+/*carrusel*/ 
+/*
+.box{
+  position: relative;
+  width: 200px;
+  height: 200px; 
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(0deg);
+  animation: animate 20s linear infinite;
+}
+
+.box span{
+  position: absolute;
+  top: -250px;
+  left: 800px;
+  width: 300px;
+  height: 300px;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc( var(--i) * 45deg) translateZ(400px));
+  -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004) ;
+
+  }
+
+
+.box span image{
+  position: absolute;
+  top:150px;
+  left: 300px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+*/
